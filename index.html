@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css\style.css">
+<script>
+function display(data)
+{
+	calculator.output.value+=data;
+}
+function result()
+{
+	var x = calculator.output.value 
+    var y = eval(x) 
+    calculator.output.value = y 
+}
+</script>
+
+</head>
+<body>
+<center>
+<div id="container">
+<h2>Umair Calculator</h2>
+<form name="calculator">
+<input type="text" name="output"><br>
+<input type="button" value="X" onclick="display('*')">
+<input type="button" value="/" onclick="display('/')">
+<input type="button" value="+" onclick="display('+')"><br>
+<input type="button" value="-" onclick="display('-')">
+<input type="button" value="%" onclick="display('%')"><br>
+<input type="button" value="1" onclick="display('1')">
+<input type="button" value="2" onclick="display('2')">
+<input type="button" value="3" onclick="display('3')"><br>
+<input type="button" value="4" onclick="display('4')">
+<input type="button" value="5" onclick="display('5')">
+<input type="button" value="6" onclick="display('6')"><br>
+<input type="button" value="7" onclick="display('7')">
+<input type="button" value="8" onclick="display('8')">
+<input type="button" value="9" onclick="display('9')"><br>
+<input type="reset" value="Clear">
+<input type="button" value="0" onclick="display('0')">
+<input type="button" value="=" onclick="result()">
+</form>
+</div>
+</center>
+</body>
+</html>
